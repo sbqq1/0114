@@ -6,15 +6,25 @@
 </head>
 <body>
  <script type="text/javascript">
-     let myPasswor="";
-     let answer="123456";
-     myPasswor= prompt("請輸入密碼","abc");
-     do {
-         if(myPasswor===answer){break;}
-         alert("密碼錯誤");
-         myPasswor= prompt("請輸入密碼","abc");
-     } while (myPasswor !== answer);
-     alert("密碼正確");
+     let ans = Math.random()*10 //[0,10)
+     ans = Math.floor(ans); //取地函數
+     let guess =0; //宣告輸入
+     while (true){
+         //提供給使用者輸入
+      guess = prompt("請輸入0-9","");
+      //檢查
+      if (guess==ans){
+          alert("恭喜答對了")
+          break;   //跳離while
+      }
+         alert("再給你一次機會!")
+     }
+
+
+
+
+
+
 
  </script>
 </body>
